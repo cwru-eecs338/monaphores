@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="create an executable JAR file">
+  <property name="source" location="." />
+  <property name="dest" location="bin" />
+  <property name="jarfile" location="main.jar" />
+  <target name="init">
+    <mkdir dir="${dest}" />
+  </target>
+  <target name="clean">
+    <delete dir="${dest}" />
+  </target>
+  <target name="compile" depends="init">
+    <javac srcdir="${source}" destdir="${dest}" />
+  </target>
+  <target name="create_run_jar" depends="compile">
+    <jar destfile="${jarfile}" filesetmanifest="mergewithoutmain">
+      <manifest>
+        <attribute name="Main-Class" value="ProducerConsumer"/>
+        <attribute name="Class-Path" value="."/>
+      </manifest>
+      <fileset dir="${dest}"/>
+    </jar>
+    <chmod file="${jarfile}" perm="755" />
+  </target>
+</project>
