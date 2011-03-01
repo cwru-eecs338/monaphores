@@ -88,15 +88,16 @@ public class ProducerConsumer {
      * we are producing and consuming.
      */
     public static enum Charm {
-        PINK_HEART(35, 1),
-        ORANGE_STAR(33, 1),
-        YELLOW_MOON(33, 0),
-        GREEN_CLOVER(32, 0),
-        BLUE_DIAMOND(34, 1),
-        PURPLE_HORSESHOE(35, 0),
-        RED_BALLOON(31, 0);
+        PINK_HEART       (35, 1),
+        ORANGE_STAR      (33, 1),
+        YELLOW_MOON      (33, 0),
+        GREEN_CLOVER     (32, 0),
+        BLUE_DIAMOND     (34, 1),
+        PURPLE_HORSESHOE (35, 0),
+        RED_BALLOON      (31, 0);
 
         private int ansi_color, setting;
+
         private Charm(int ansi_color, int setting) {
             this.ansi_color = ansi_color;
             this.setting = setting;
