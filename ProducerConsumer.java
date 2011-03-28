@@ -89,8 +89,8 @@ public class ProducerConsumer {
      */
     public static enum Charm {
         PINK_HEART       (35, 1),
-        ORANGE_STAR      (33, 1),
-        YELLOW_MOON      (33, 0),
+        ORANGE_STAR      (33, 0),
+        YELLOW_MOON      (33, 1),
         GREEN_CLOVER     (32, 0),
         BLUE_DIAMOND     (34, 1),
         PURPLE_HORSESHOE (35, 0),
